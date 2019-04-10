@@ -1,0 +1,182 @@
+/*
+0 - 600px:      Phone
+600 - 900px:    Tablet portrait
+900 - 1200px:   Tablet landscape
+[1200 - 1800] is where our normal styles apply
+1800px + :      Big desktop
+
+$breakpoint arguement choices:
+- phone
+- tab-port
+- tab-land
+- big-desktop
+
+ORDER: Base + typography > general layout + grid > page layout > components
+
+1em = 16px
+*/
+body {
+  font-family: "Lato",sans-serif;
+  font-weight: 400;
+  /*    font-size: 16px;*/
+  line-height: 1.7; }
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit; }
+
+html {
+  font-size: 62.5%; }
+  @media only screen and (max-width: 37.5em) {
+    html {
+      font-size: 70%; } }
+  @media only screen and (max-width: 75em) {
+    html {
+      font-size: 56.25%; } }
+  @media only screen and (max-width: 56.25em) {
+    html {
+      font-size: 50%; } }
+  @media only screen and (min-width: 112.5em) {
+    html {
+      font-size: 75%; } }
+
+body {
+  box-sizing: border-box; }
+
+.u-margin-bottom-small {
+  margin-bottom: 3rem; }
+
+.u-margin-bottom-medium {
+  margin-bottom: 4.5rem; }
+
+.u-center-text {
+  text-align: center; }
+
+.heading {
+  font-size: 3rem;
+  background-color: brown;
+  color: #fff; }
+
+.table_container {
+  background-color: orange;
+  padding: 0.1rem; }
+
+.single_table {
+  width: 80%;
+  margin: 2rem auto;
+  background-color: #dedede;
+  padding: 2rem;
+  border-radius: 2rem; }
+  @media only screen and (max-width: 37.5em) {
+    .single_table {
+      width: 90%;
+      margin: 1rem auto; } }
+  .single_table_top {
+    display: flex; }
+    .single_table_top-left {
+      display: flex;
+      margin-right: auto; }
+    .single_table_top-right {
+      display: flex;
+      align-items: center; }
+
+.add_field_container {
+  margin: 0 2rem; }
+
+.add_field {
+  width: 2.5rem; }
+
+.input_field,
+.select_wood {
+  width: 10rem;
+  height: 4rem;
+  border: none;
+  border-radius: 0.5rem;
+  outline: none;
+  padding: .5rem; }
+
+.label {
+  font-size: 1.6rem; }
+
+.input_width {
+  margin-right: 2rem; }
+
+.input_field:focus {
+  outline: none;
+  border: 3px solid brown;
+  padding: 1rem;
+  transition: all 1s; }
+
+.input_field::placeholder {
+  color: #000; }
+
+.category_table {
+  width: 100%;
+  font-size: 2rem;
+  padding: 1rem; }
+
+.category_table tr td {
+  text-align: center;
+  padding: 1rem; }
+
+.category_sum_table {
+  width: 70%;
+  font-size: 2rem;
+  padding: 1rem;
+  margin: 1rem auto;
+  border: 3px solid brown; }
+
+.category_sum_table tr td {
+  text-align: center;
+  padding: 1rem; }
+
+.plus_table_container {
+  width: 5rem;
+  position: fixed;
+  top: 40%;
+  right: 2%; }
+  @media only screen and (max-width: 37.5em) {
+    .plus_table_container {
+      right: 1%; } }
+
+.plus_table {
+  width: 100%; }
+
+.close_container {
+  height: 5rem;
+  position: relative; }
+
+.table_close_container {
+  width: 3rem;
+  position: absolute;
+  top: 0;
+  right: 0; }
+
+.table_close {
+  width: 100%; }
+
+.close_field {
+  width: 2rem; }
+
+.total_container {
+  background-color: orange;
+  padding: 0.1rem; }
+
+.total_table_container {
+  width: 80%;
+  margin: 2rem auto;
+  background-color: #eee;
+  padding: 2rem;
+  border-radius: 2rem; }
+
+.full_total_table {
+  font-size: 2rem;
+  width: 100%; }
+  .full_total_table td {
+    text-align: center; }
+
+.total_heading {
+  font-size: 4rem; }
