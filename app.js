@@ -258,7 +258,7 @@ function readingFieldLengthValue(e) {
 	var name = allIds[0];
 	var tableIndex = parseInt(allIds[1]);
 	var fieldIndex = parseInt(allIds[2]);
-	var value = parseInt(e.target.value);
+	var value = parseFloat(e.target.value);
 	insertingLengthAndCount(name, tableIndex, fieldIndex, value);
 }
 
@@ -267,7 +267,7 @@ function readingFieldCountValue(e) {
 	var name = allIds[0];
 	var tableIndex = parseInt(allIds[1]);
 	var fieldIndex = parseInt(allIds[2]);
-	var value = parseInt(e.target.value);
+	var value = parseFloat(e.target.value);
 	insertingLengthAndCount(name, tableIndex, fieldIndex, value);
 }
 
@@ -283,7 +283,7 @@ function readingFieldThicknessValue(e) {
 	var allIds = e.target.id.split('-');
 	var name = allIds[0];
 	var tableIndex = parseInt(allIds[1]);
-	var value = parseInt(e.target.value);
+	var value = parseFloat(e.target.value);
 	insertingWidthAndThickness(name, tableIndex, value);
 }
 
