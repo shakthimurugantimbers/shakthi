@@ -94,8 +94,8 @@ function createTable() {
                 placeholder="count"
               />
             </td>
-            <td><p class="feet_info feet_info-${tableindex}" id="feet_info-${tableindex}-0">30</p></td>
-						<td><p class="cubic_info cubic_info-${tableindex}" id="cubic_info-${tableindex}-0">20</p></td>
+            <td><p class="feet_info feet_info-${tableindex}" id="feet_info-${tableindex}-0">0</p></td>
+						<td><p class="cubic_info cubic_info-${tableindex}" id="cubic_info-${tableindex}-0">0</p></td>
 						<td>
 									<img
 										class="close_field"
@@ -120,11 +120,11 @@ function createTable() {
         <tbody>
           <tr>
             <td>Feet</td>
-            <td><p class="total_feet" id="total_feet-${tableindex}">100</p></td>
+            <td><p class="total_feet" id="total_feet-${tableindex}">0</p></td>
             <td>
               <input type="number" class="input_field per_feet_amount" id="per_feet_amount-${tableindex}" />
             </td>
-            <td><p class="total_feet_amount" id="total_feet_amount-${tableindex}">100</p></td>
+            <td><p class="total_feet_amount" id="total_feet_amount-${tableindex}">0</p></td>
           </tr>
           <tr>
             <td>Cubic</td>
@@ -132,7 +132,7 @@ function createTable() {
             <td>
               <input type="number" class="input_field per_cubic_amount" id="per_cubic_amount-${tableindex}" />
             </td>
-            <td><p class="total_cubic_amount" id="total_cubic_amount-${tableindex}">20000</p></td>
+            <td><p class="total_cubic_amount" id="total_cubic_amount-${tableindex}">0</p></td>
           </tr>
         </tbody>
       </table>
@@ -227,8 +227,8 @@ function addFieldsInTable(e) {
       placeholder="count"
     />
   </td>
-  <td><p class="feet_info feet_info-${tableIndexByClicking}" id="feet_info-${tableIndexByClicking}-${fieldIndex}">30</p></td>
-	<td><p class="cubic_info cubic_info-${tableIndexByClicking}" id="cubic_info-${tableIndexByClicking}-${fieldIndex}">20</p></td>
+  <td><p class="feet_info feet_info-${tableIndexByClicking}" id="feet_info-${tableIndexByClicking}-${fieldIndex}">0</p></td>
+	<td><p class="cubic_info cubic_info-${tableIndexByClicking}" id="cubic_info-${tableIndexByClicking}-${fieldIndex}">0</p></td>
 	<td>
 		<img
 		class="close_field"
@@ -486,7 +486,7 @@ function deletingParicularTable(e) {
 	var idWithWordsArray = idWithWords.split('-');
 	var id = parseInt(idWithWordsArray[1]);
 	var selectedTable = selectingParicularTable(id);
-	console.log(id,selectedTable);
+	console.log(id, selectedTable);
 
 	var tableIndex = tables.indexOf(selectedTable);
 	tables.splice(tableIndex, 1);
@@ -495,5 +495,4 @@ function deletingParicularTable(e) {
 	var deletingTable = document.querySelector(`#${idWithWords}`).parentElement.parentElement.parentElement;
 
 	deletingTable.parentElement.removeChild(deletingTable);
-	
 }
