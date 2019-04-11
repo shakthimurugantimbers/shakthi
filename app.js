@@ -165,8 +165,8 @@ function createTable() {
 	}
 	var table = new Table(tableindex);
 	tables.push(table);
-	tables[tableindex].tableFields.push(insertFieldsIntoTable());
-	tables[tableindex].tableFieldsCount = tables[tableindex].tableFieldsCount + 1;
+	tables[tables.length-1].tableFields.push(insertFieldsIntoTable());
+	tables[tables.length-1].tableFieldsCount = tables[tables.length-1].tableFieldsCount + 1;
 	tableCount = tables.length;
 }
 
@@ -378,16 +378,28 @@ function selectParticularField(tableindex, fieldIndex) {
 }
 
 function calculatingAndDisplayingCategoryTotal(tableIndex) {
+	tables[tableIndex].categorySum.inFeet.unit = 0;
+	tables[tableIndex].categorySum.inCubic.unit = 0;
 	var selectedFields = tables[tableIndex].tableFields;
 	var categoryTotalFeet = 0;
 	var categoryTotalCubic = 0;
 	selectedFields.forEach(element => {
-		categoryTotalFeet = categoryTotalFeet + element.inFeet;
-		categoryTotalCubic = categoryTotalCubic + element.inCubic;
-	});
+		console.log(element.inFeet);
+		tables[tableIndex].categorySum.inFeet.unit = element.inFeet + tables[tableIndex].categorySum.inFeet.unit;
+		tables[tableIndex].categorySum.inCubic.unit = element.inCubic + tables[tableIndex].categorySum.inCubic.unit;
 
-	tables[tableIndex].categorySum.inFeet.unit = categoryTotalFeet;
-	tables[tableIndex].categorySum.inCubic.unit = categoryTotalCubic;
+		// console.log(element.inFeet);
+		// categoryTotalFeet = categoryTotalFeet + element.inFeet;
+		// categoryTotalCubic = categoryTotalCubic + element.inCubic;
+		// console.log(categoryTotalFeet);
+	});
+	tables[tableIndex].categorySum.inFeet.unit = parseFloat(tables[tableIndex].categorySum.inFeet.unit.toFixed(2));
+	tables[tableIndex].categorySum.inCubic.unit = parseFloat(tables[tableIndex].categorySum.inCubic.unit.toFixed(2));
+
+	// parseFloat(categoryTotalCubic).toFixed(2)
+	// parseFloat(categoryTotalFeet).toFixed(2)
+	// tables[tableIndex].categorySum.inFeet.unit = 0;
+	// tables[tableIndex].categorySum.inCubic.unit = 0;
 
 	tables[tableIndex].categorySum.inFeet.totalamount =
 		tables[tableIndex].categorySum.inFeet.unit * tables[tableIndex].categorySum.inFeet.perUnitAmount.toFixed(2);
@@ -395,8 +407,8 @@ function calculatingAndDisplayingCategoryTotal(tableIndex) {
 		(tables[tableIndex].categorySum.inCubic.unit * tables[tableIndex].categorySum.inCubic.perUnitAmount).toFixed(2)
 	);
 
-	document.querySelector(`#total_feet-${tableIndex}`).textContent = categoryTotalFeet;
-	document.querySelector(`#total_cubic-${tableIndex}`).textContent = categoryTotalCubic;
+	document.querySelector(`#total_feet-${tableIndex}`).textContent = tables[tableIndex].categorySum.inFeet.unit;
+	document.querySelector(`#total_cubic-${tableIndex}`).textContent = tables[tableIndex].categorySum.inCubic.unit;
 
 	document.querySelector(`#total_feet_amount-${tableIndex}`).textContent =
 		tables[tableIndex].categorySum.inFeet.totalamount;
