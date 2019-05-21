@@ -2,147 +2,275 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <link rel="stylesheet" href="css/style.css" />
-    <title>Shakthi Murugan Timbers</title>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+		integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous" />
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+		integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous" />
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-confirm/3.3.2/jquery-confirm.min.css">
+
+	<link rel="stylesheet" href="css/style.css" />
+	<title>Shakthi Murugan Timbers</title>
 </head>
 
 <body>
-    <header class="heading">Shakthi Murugan Timbers</header>
-    <div class="table_container">
-        <div class="single_table single_table-0">
-            <div class="close_container close_container-0">
-                <div class="table_close_container table_close_container-0">
-                    <img src="img/002-cross.png" alt="" id="table_close-0" class="table_close table_close-0" />
-                </div>
-            </div>
-            <div class="single_table_top">
-                <div class="single_table_top-left">
-                    <input type="number" placeholder="Width" class="input_field input_width" id="input_width-0" />
-                    <input type="number" placeholder="thickness" class="input_field input_thickness" id="input_thickness-0" />
-                </div>
-                <div class="single_table_top-right">
-                    <select class="select_wood" id="select_wood-0">
-                        <option value="teak">Teak</option>
-                        <option value="sal">Sal</option>
-                        <option value="burma">Burma</option>
-                    </select>
-                    <div class="add_field_container">
-                        <img src="img/plus.png" alt="plus_field" class="add_field add_field-0" />
-                    </div>
-                </div>
-            </div>
-            <div class="single_table_botttom">
-                <table class="category_table">
-                    <thead>
-                        <tr>
-                            <th>Length</th>
-                            <th>Count</th>
-                            <th>In Feet</th>
-                            <th>In Cubic</th>
-                            <th></th>
-                        </tr>
-                    </thead>
-                    <tbody class="table_category_body table_category_body-0">
-                        <tr>
-                            <td>
-                                <input type="number" id="input_length-0-0" class="input_field input_length input_length-0" placeholder="Length" />
-                            </td>
-                            <td>
-                                <input type="number" id="input_count-0-0" class="input_field input_count input_count-0" placeholder="count" />
-                            </td>
-                            <td>
-                                <p class="feet_info feet_info-0" id="feet_info-0-0">0</p>
-                            </td>
-                            <td>
-                                <p class="cubic_info cubic_info-0" id="cubic_info-0-0">0</p>
-                            </td>
-                            <td>
-                                <img class="close_field" id="close_field-0-0" src="img/002-cross.png" alt="delete particular Field" />
-                            </td>
-                        </tr>
-                    </tbody>
-                </table>
-                <hr />
-                <table class="category_sum_table">
-                    <thead>
-                        <tr>
-                            <th>Unit</th>
-                            <th>Total</th>
-                            <th>Per Unit Amount</th>
-                            <th>Total Amount</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>Feet</td>
-                            <td>
-                                <p class="total_feet" id="total_feet-0">0</p>
-                            </td>
-                            <td>
-                                <input type="number" class="input_field per_feet_amount" id="per_feet_amount-0" />
-                            </td>
-                            <td>
-                                <p class="total_feet_amount" id="total_feet_amount-0">0</p>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>Cubic</td>
-                            <td>
-                                <p class="total_cubic" id="total_cubic-0">0</p>
-                            </td>
-                            <td>
-                                <input type="number" class="input_field per_cubic_amount" id="per_cubic_amount-0" />
-                            </td>
-                            <td>
-                                <p class="total_cubic_amount" id="total_cubic_amount-0">0</p>
-                            </td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-        </div>
-    </div>
-    <div class="total_container">
-        <div class="total_table_container">
-            <table class="full_total_table">
-               <caption class="total_heading">Total</caption>
-                <thead>
-                    <tr>
-                        <th>Unit</th>
-                        <th>Total  Measurement</th>
-                        <th>Total Amount</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>Feet</td>
-                        <td>
-                            <p class="full_feet_total">0</p>
-                        </td>
-                        <td>
-                            <p class="full_feet_total_amount">0</p>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>Cubic</td>
-                        <td>
-                            <p class="full_cubic_total">0</p>
-                        </td>
-                        <td>
-                            <p class="full_cubic_total_amount">0</p>
-                        </td>
-                    </tr>
-                </tbody>
-            </table>
-        </div>
-    </div>
-    <div class="plus_table_container">
-        <img src="img/plus.png" class="plus_table" alt=" click here to add new table" />
-    </div>
-    <script src="app.js"></script>
+	<div class="black_screen">
+		<div class="row">
+			<div class="offset-11 col-1">
+				<i class="fas fa-times fa-2x close_print"></i>
+			</div>
+		</div>
+		<section id="print_section">
+			<h1 class="text-center">Shakthi Murugan Timbers</h1>
+			<div class="tables mt-5">
+				<!-- <table class="table table-sm w-75 mx-auto">
+					<thead>
+						<tr>
+							<th colspan="5">4 x 3</th>
+						</tr>
+						<tr>
+							<th scope="col">Item-no</th>
+							<th scope="col">Length</th>
+							<th scope="col">Count</th>
+							<th scope="col">Feet</th>
+							<th scope="col">Cubic</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+						</tr>
+					</tbody>
+				</table>
+				<table class="table-sm table-borderless w-75 mx-auto">
+						<thead>
+							<tr>
+								<th>Unit</th>
+								<th>Total</th>
+								<th>Per Unit Amount</th>
+								<th>Total Amount</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>Feet</td>
+								<td></td>
+								<td></td>
+								<td></td>
+							</tr>
+							<tr>
+								<td>Cubic</td>
+								<td></td>
+								<td></td>
+								<td></td>								
+							</tr>
+						</tbody>
+					</table> -->
+			</div>
+
+		</section>
+		<div class="mt-5 text-center">
+			<button class="btn btn-danger print">Print</button>
+		</div>
+	</div>
+	<!-- Navbar -->
+	<nav class="navbar navbar-expand-md navbar-dark bg-danger text-white border border-white">
+		<a class="navbar-brand" href="#">Shakthi Murugan Timbers</a>
+		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault"
+			aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+			<span class="navbar-toggler-icon"></span>
+		</button>
+
+		<div class="collapse navbar-collapse" id="navbarsExampleDefault">
+			<ul class="navbar-nav ml-auto">
+				<li class="nav-item">
+					<a class="nav-link text-white" href="#">Home</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link text-white" href="https://shakthimurugantimbers.github.io/roundlog"
+						target="_blank">Round Log Calculation</a>
+				</li>
+			</ul>
+		</div>
+	</nav>
+	<!-- Total Container -->
+	<section class="app-container p-sm-5 bg-danger">
+		<!-- <div class="row single_table-0">
+			<div class="col-sm-11 mx-auto">
+				<div class="card bg-dark text-white">
+					<div class="card-header">
+						<div class="delete_table d-inline-block" id="delete_table-0">
+							<i class="fas fa-trash "></i>
+						</div>
+						<div class="row py-3">
+							<div class="col-3">
+								<div class="form-group">
+									<input type="number" id="width-0" class="form-control width" placeholder="Width">
+								</div>
+							</div>
+							<div class="col-3">
+								<div class="form-group">
+									<input type="number" class="thickness form-control" id="thickness-0"
+										placeholder="Thickness">
+								</div>
+							</div>
+							<div class="col-3">
+								<div class="form-group">
+									<select id="wood-0" class="form-control">
+										<option value="teak">Teak</option>
+										<option value="sal">Sal</option>
+										<option value="vembu">Vembu</option>
+										<option value="white_sal">White Sal</option>
+									</select>
+								</div>
+							</div>
+							<div class="col-3 add_field_div">
+								<img class="d-block ml-auto add_field" src="img/plus.png" width="25px" height="25px"
+									id="add_field-0">
+							</div>
+						</div>
+					</div>
+					<div class="card-body">
+						<table class="table table-sm table-borderless text-center text-white">
+							<thead>
+								<tr>
+									<th>Length</th>
+									<th>Count</th>
+									<th>Feet</th>
+									<th>Cubic</th>
+									<th></th>
+								</tr>
+							</thead>
+							<tbody class="single_table_body-0">
+								<tr>
+									<td class="px-sm-3">
+										<input type="number" class="length form-control" id="length-0-0">
+									</td>
+									<td class="px-sm-3">
+										<input type="number" class="count form-control" id="count-0-0">
+									</td>
+									<td>
+										<p class="feet-0-0">0</p>
+									</td>
+									<td>
+										<p class="cubic-0-0">0</p>
+									</td>
+									<td>
+										<div class="delete_field" id="delete_field-0-0">
+											<img src="img/cross.png" alt="" width="20px" height="20px">
+										</div>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+					<div class="card-footer">
+						<table class="table table-borderless text-center text-white">
+							<thead>
+								<tr>
+									<th>Unit</th>
+									<th>Total</th>
+									<th>Per Unit Amount</th>
+									<th>Total Amount</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td>Feet</td>
+									<td>
+										<p class="sub_total_feet" id="sub_total_feet-0">0</p>
+									</td>
+									<td>
+										<input type="number" id="per_feet_amount-0"
+											class="per_feet_amount form-control w-50 mx-auto">
+									</td>
+									<td>
+										<p class="sub_total_feet_amount" id="sub_total_feet_amount-0">0</p>
+									</td>
+								</tr>
+								<tr>
+									<td>Cubic</td>
+									<td>
+										<p class="sub_total_cubic" id="sub_total_cubic-0">0</p>
+									</td>
+									<td>
+										<input type="number" id="per_cubic_amount-0"
+											class="per_cubic_amount form-control w-50 mx-auto">
+									</td>
+									<td>
+										<p class="sub_total_cubic_amount" id="sub_total_cubic_amount-0">0</p>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</div>
+			</div>
+		</div> -->
+	</section>
+	<!-- Entire Total -->
+	<section id="total" class="bg-danger">
+		<div class="row">
+			<div class="col-sm-8 mx-auto bg-white mb-5 rounded">
+				<h5 class="display-4 text-danger text-center">Total</h5>
+				<table class="table table-borderless text-danger text-center">
+					<thead>
+						<tr class="text-dark">
+							<th scope="col">Unit</th>
+							<th scope="col">Total Measurement</th>
+							<th scope="col">Total Amount</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td class="text-dark">Feet</td>
+							<td>
+								<p class="total_feet">0</p>
+							</td>
+							<td>
+								<p class="total_feet_amount">0</p>
+							</td>
+						</tr>
+						<tr>
+							<td class="text-dark">Cubic</td>
+							<td>
+								<p class="total_cubic">0</p>
+							</td>
+							<td>
+								<p class="total_cubic_amount">0</p>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+		</div>
+		<!-- Print Button -->
+		<div class="row">
+			<div class=" offset-4 col-4 mb-5">
+				<button class="btn btn-dark btn-block print_preview">Print</button>
+			</div>
+		</div>
+	</section>
+	<!-- floating add table div -->
+	<div class="floating_div">
+		<img src="img/plus.png" alt="" class="add_table w-100 h-100">
+	</div>
+	<script src="http://code.jquery.com/jquery-3.4.0.min.js"
+		integrity="sha256-BJeo0qm959uMBGb65z40ejJYGSgR7REI4+CW1fNKwOg=" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+		integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">
+	</script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+		integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
+	</script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-confirm/3.3.2/jquery-confirm.min.js"></script>
+	<script src="js/app.js"></script>
 </body>
 
 </html>
