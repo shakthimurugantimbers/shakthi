@@ -35,14 +35,14 @@ class Table {
         // const fieldIndex = findIndexOfFieldByFieldVar(tableIndex, fieldIndex);
         const field = this.inputFields[fieldIndex];
         field.feet = field.length * field.count;
-        field.cubic = parseFloat(((field.length * field.count * this.width * this.thickness) / 144).toFixed(2));
+        field.cubic = Math.round(parseFloat(((field.length * field.count * this.width * this.thickness) / 144).toFixed(2)));
     };
     calculateFeetAndCubicArray = function () {
         if (this.width >= 0 && this.thickness >= 0) {
             const fields = this.inputFields;
             fields.forEach(field => {
                 field.feet = field.length * field.count;
-                field.cubic = parseFloat(((this.width * this.thickness * field.length * field.count) / 144).toFixed(2));
+                field.cubic = Math.round(parseFloat(((this.width * this.thickness * field.length * field.count) / 144).toFixed(2)));
             });
         }
     };
@@ -192,7 +192,7 @@ function addTableToUI() {
                                 <p class="sub_total_feet" id="sub_total_feet-${currentTableIndex}">0</p>
                             </td>
                             <td>
-                                <input type="number" id="per_feet_amount-${currentTableIndex}" class="per_feet_amount form-control w-100 mx-auto">
+                                <input type="number" id="per_feet_amount-${currentTableIndex}" class="per_feet_amount form-control w-100">
                             </td>
                             <td>
                                 <p class="sub_total_feet_amount" id="sub_total_feet_amount-${currentTableIndex}">0</p>
@@ -204,7 +204,7 @@ function addTableToUI() {
                                 <p class="sub_total_cubic" id="sub_total_cubic-${currentTableIndex}">0</p>
                             </td>
                             <td>
-                                <input type="number" id="per_cubic_amount-${currentTableIndex}" class="per_cubic_amount form-control w-100 mx-auto">
+                                <input type="number" id="per_cubic_amount-${currentTableIndex}" class="per_cubic_amount form-control w-100">
                             </td>
                             <td>
                                 <p class="sub_total_cubic_amount" id="sub_total_cubic_amount-${currentTableIndex}">0</p>
@@ -624,3 +624,13 @@ function printPreview() {
     `;
     document.querySelector(`.tables`).insertAdjacentHTML('beforeend', completeTotalHTML);
 }
+
+// function printInfo() {
+//     var doc = document.querySelector('#print_section');
+//     var openWindow = window.open("", "title", "attributes");
+//     openWindow.document.write(doc.innerHTML);
+//     openWindow.document.close();
+//     openWindow.focus();
+//     openWindow.print();
+//     openWindow.close();
+// }
