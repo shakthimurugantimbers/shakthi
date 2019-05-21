@@ -192,7 +192,7 @@ function addTableToUI() {
                                 <p class="sub_total_feet" id="sub_total_feet-${currentTableIndex}">0</p>
                             </td>
                             <td>
-                                <input type="number" id="per_feet_amount-${currentTableIndex}" class="per_feet_amount form-control w-50 mx-auto">
+                                <input type="number" id="per_feet_amount-${currentTableIndex}" class="per_feet_amount form-control w-100 mx-auto">
                             </td>
                             <td>
                                 <p class="sub_total_feet_amount" id="sub_total_feet_amount-${currentTableIndex}">0</p>
@@ -204,7 +204,7 @@ function addTableToUI() {
                                 <p class="sub_total_cubic" id="sub_total_cubic-${currentTableIndex}">0</p>
                             </td>
                             <td>
-                                <input type="number" id="per_cubic_amount-${currentTableIndex}" class="per_cubic_amount form-control w-50 mx-auto">
+                                <input type="number" id="per_cubic_amount-${currentTableIndex}" class="per_cubic_amount form-control w-100 mx-auto">
                             </td>
                             <td>
                                 <p class="sub_total_cubic_amount" id="sub_total_cubic_amount-${currentTableIndex}">0</p>
