@@ -35,14 +35,14 @@ class Table {
         // const fieldIndex = findIndexOfFieldByFieldVar(tableIndex, fieldIndex);
         const field = this.inputFields[fieldIndex];
         field.feet = field.length * field.count;
-        field.cubic = Math.round(parseFloat(((field.length * field.count * this.width * this.thickness) / 144).toFixed(2)));
+        field.cubic = parseFloat(((field.length * field.count * this.width * this.thickness) / 144).toFixed(2));
     };
     calculateFeetAndCubicArray = function () {
         if (this.width >= 0 && this.thickness >= 0) {
             const fields = this.inputFields;
             fields.forEach(field => {
                 field.feet = field.length * field.count;
-                field.cubic = Math.round(parseFloat(((this.width * this.thickness * field.length * field.count) / 144).toFixed(2)));
+                field.cubic = parseFloat(((this.width * this.thickness * field.length * field.count) / 144).toFixed(2));
             });
         }
     };
